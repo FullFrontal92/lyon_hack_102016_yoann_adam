@@ -1,0 +1,22 @@
+.header-height{
+    height: 100px;
+    background-color: rgb(30,30,30);
+}
+.title{
+    font-size: 30px;
+    color: rgb(220,220,220);
+    height: 100%;
+    width: 100%;
+    padding-top: 30px;
+    text-align: center;
+}
+.title:hover{
+    background-color: rgb(220,220,220);
+    color: rgb(30,30,30);
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+a:hover{
+    text-decoration: none;
+}

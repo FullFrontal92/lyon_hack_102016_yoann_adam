@@ -36,7 +36,20 @@ function showUser($conn){
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            echo '<li>'.'<a href="../public/vote.php?user='.$row['User'].'&vote='.$row['Voteleft'].'">'.$row['User'].' '. $row['Voteleft'].'</a>'.'</li>';
+            echo '<li>'.'<a href="../public/vote.php?user='.$row['User'].'&vote='.$row['Voteleft'].'">'.$row['User'].' '. $row['Voteleft']. $row['Votecontest'].'</a>'.'</li>';
+        }
+    } else {
+        echo "0 results";
+    }
+}
+function showSocks($conn){
+    $userVoter = $_GET['user'];
+    $sql = "SELECT * FROM Photo";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo '<a href="../src/upVote.php?user='.$row['User'].'&vote='.$row['Votecontest'].'&userVoter='.$userVoter.'"><img class="col-xs-6 col-md-2 margin-top" src="'.$row['Urlp'].'"></a>';
         }
     } else {
         echo "0 results";

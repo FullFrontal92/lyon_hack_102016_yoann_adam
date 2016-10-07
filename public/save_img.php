@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 $path = '../public/images/socks';
 $extension = 'png';
@@ -22,5 +23,3 @@ if(isset($_POST['img_data'])){
     $data = file_get_contents($path.$_SESSION['save_to_file']);
     echo $data;
 }
-
-?>

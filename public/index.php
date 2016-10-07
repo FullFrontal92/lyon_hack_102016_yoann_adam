@@ -19,6 +19,7 @@
             </form>
         </div>
         <div class="row">
+            <?php include "snapshot.php" ?>
         </div>
     </div>
 </body>

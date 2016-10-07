@@ -11,7 +11,9 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="stylesheet.css"/>
-    <script type="text/javascript" src="js/hack.js"></script>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -25,13 +27,15 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="max-height dropdown-menu" role="menu">
-                            <?php include '../src/bdd.php';
-                                showMyDb(getConnection());
+                            <?php include '../src/bddphoto.php';
+                                showUser(getConnection());
                             ?>
                         </ul>
                     </li>
                 </ul>
-                <div id="nameSelected" class="col-xs-8 name">Jean Clement</div>
+                <div id="nameSelected" class="col-xs-8 name">
+                    <?php echo $_GET['user'].':  '.$_GET['vote'].' votes restants'; ?>
+                </div>
             </div>
             <div class="margi-left-right row">
                 <img class="col-xs-6 col-md-2 margin-top" src="images/socks.jpg">

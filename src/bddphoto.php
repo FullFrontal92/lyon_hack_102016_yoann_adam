@@ -8,7 +8,7 @@
 function getConnection()
 {
     $user = "root";
-    $password = "jecode4laloupe";
+    $password = "E-(&É(GK";
     $host = "localhost";
     $db = "Hackathon";
 
@@ -30,5 +30,16 @@ function execSql($mysqli, $sql){
     return $result;
 }
 
-
+function showUser($conn){
+    $sql = "SELECT * FROM Photo WHERE Voteleft > 0";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo '<li>'.'<a href="../public/vote.php?user='.$row['User'].'&vote='.$row['Voteleft'].'">'.$row['User'].' '. $row['Voteleft'].'</a>'.'</li>';
+        }
+    } else {
+        echo "0 results";
+    }
+}
 ?>

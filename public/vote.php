@@ -21,8 +21,13 @@
                         </ul>
                     </li>
                 </ul>
-                <div id="nameSelected" class="col-xs-8 name">
+                <div class="col-xs-4 name">
                     <?php echo $_GET['user'].':  '.$_GET['vote'].' votes restants'; ?>
+                </div>
+                <div class="col-xs-4 name">
+                    <?php
+                        showWinner(getConnection());
+                    ?>
                 </div>
             </div>
             <div class="margi-left-right row">

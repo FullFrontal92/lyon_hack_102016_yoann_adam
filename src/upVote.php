@@ -10,4 +10,4 @@ $sql = "UPDATE Photo SET Votecontest = Votecontest + 1 WHERE User = '".$_GET['us
 execSql(getConnection(), $sql);
 $sql = "UPDATE Photo SET Voteleft = Voteleft - 1 WHERE User = '".$_GET['userVoter']."'";
 execSql(getConnection(), $sql);
-header("Location: ../public/vote.php");
+header("Location: ../public/vote.php?user=".$_GET['userVoter'].'');

@@ -14,7 +14,6 @@ if(isset($_POST['img_data'])){
     $_SESSION['save_to_file'] = $file_name;
     header('Content-type: image/png');
     $data = file_get_contents($path.$_SESSION['save_to_file']);
-
     echo $data;
 
 } else {
@@ -23,4 +22,5 @@ if(isset($_POST['img_data'])){
     $data = file_get_contents($path.$_SESSION['save_to_file']);
     echo $data;
 }
+
 ?>

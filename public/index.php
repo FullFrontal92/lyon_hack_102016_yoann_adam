@@ -11,10 +11,17 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="stylesheet.css"/>
-    <script type="text/javascript" src="js/hack.js"></script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <?php include 'header.php' ?>
+
+        <!--test camera-->
+        <video id="video"></video>
+        <button id="startbutton">Prendre une photo</button>
+        <canvas id="canvas"></canvas>
+        <img onclick="test();" src="http://placekitten.com/g/320/261" id="photo" alt="photo">
     </header>
 </body>

@@ -29,7 +29,7 @@ function showMyDb($conn){
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            echo '<li>'.'<a onclick="showName('.$row['nom'].');">'.$row['nom'].'</a>'.'</li>';
+            echo '<li>'.'<a href="../src/getUser.php?user=Wayne">'.$row['nom'].'</a>'.'</li>';
         }
     } else {
         echo "0 results";

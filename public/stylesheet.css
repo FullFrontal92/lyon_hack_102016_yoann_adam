@@ -43,3 +43,19 @@ li{
     font-size: 30px;
     text-align: center;
 }
+/* css for the pictures integrator*/
+
+
+
+#video, #image{
+
+}
+#snap,#snap_black_white,#send_snap,#snap_inverse{
+    color: black;
+    background-color: rgba(0,0,0,0);
+    font-size: 35px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 50px;
+}

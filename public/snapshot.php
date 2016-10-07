@@ -121,7 +121,7 @@
 
 					$.ajax({
 						type: "post",
-						url:  "save_to_img.php",
+						url:  "save_img.php",
 						data: {'img_data' : dataURL },
 						success: function(data){
 							alert('Enregistrement effectué !');

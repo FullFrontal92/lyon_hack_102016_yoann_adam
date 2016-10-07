@@ -1,6 +1,6 @@
 <?php
 session_start();
-$path = 'images/';
+$path = '../public/images/socks';
 $extension = 'png';
 
 if(isset($_POST['img_data'])){

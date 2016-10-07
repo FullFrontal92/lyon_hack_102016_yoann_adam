@@ -17,12 +17,6 @@
 <body>
     <header>
         <?php include 'header.php' ?>
-
-        <!--test camera-->
-        <video id="video"></video>
-        <button id="startbutton">Prendre une photo</button>
-        <canvas id="canvas"></canvas>
-        <img onclick="test();" src="http://placekitten.com/g/320/261" id="photo" alt="photo">
     </header>
     <div class="container-fluid">
         <div class="row">

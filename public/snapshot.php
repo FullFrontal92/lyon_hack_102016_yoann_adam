@@ -1,42 +1,20 @@
-<!doctype html>
-<html>
-<head>
-	<title>Camera</title>
-	<meta charset="utf-8">
-	<style>
-		body{
-			background-color: #012;
-		}
-		h1{
-			color: #FFF;
-			font-family: "Comic Sans MS", sans-serif;
-		}
-		#video, #image{
-			border: 2px solid #FFF;
-		}
-		#snap,#snap_black_white,#send_snap,#snap_inverse{
-			background-color: #ccc;
-			color: maroon;
-			font-weight: bolder;
-			padding: 10px;
-			border: none;
-			cursor: pointer;
-			border-radius: 5px;
-		}
-	</style>
-</head>
-<body>
-<h1>CAPTURE VIDEO</h1>
-<video id="video" width="640" height="480" autoplay></video>
-<canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+
+<div style="margin-top: 20px;" class="row">
+<video class="col-xs-6" id="video" width="640" height="480" autoplay></video>
+<canvas class="col-xs-6" id="canvas" width="640" height="480" style="display:none;"></canvas>
 <img id="image" src="" alt="" width="640" height="480" />
+	</div>
 
 <br/>
-
-<button id="snap">Prendre une photo</button>
-<button id="snap_black_white">Convertir en blanc et noir</button>
-<button id="snap_inverse">Inversion de couleurs</button>
-<button id="send_snap">Envoyer sur le serveur</button>
+<div class="row">
+<button class="col-xs-5" id="snap">Prendre une photo</button>
+	<div class="col-xs-2" id="">
+		<img src="http://i.imgur.com/YJbsYkX.png?3" alt="wcsnotxt">
+	</div>
+<!--<button id="snap_black_white">Convertir en blanc et noir</button>
+<button id="snap_inverse">Inversion de couleurs</button> -->
+<button class="col-xs-5" id="send_snap">Envoyer sur le serveur</button>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
@@ -125,6 +103,7 @@
 						data: {'img_data' : dataURL },
 						success: function(data){
 							alert('Enregistrement effectué !');
+
 						}
 					});
 				} else {
@@ -136,5 +115,3 @@
 		}
 	});
 </script>
-</body>
-</html>
